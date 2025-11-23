@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Checklist</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .todo-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #ccc; }
+        .todo-item.resolved { text-decoration: line-through; color: #888; }
+        .actions a { margin-left: 10px; text-decoration: none; }
+        .btn { padding: 5px 10px; background: #007bff; color: white; border-radius: 4px; text-decoration: none; }
+        .btn-danger { background: #dc3545; }
+        .btn-success { background: #28a745; }
+    </style>
+</head>
+<body>
+    <h1>Todo Checklist</h1>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
