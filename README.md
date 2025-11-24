@@ -18,7 +18,7 @@ A simple Todo checklist application built with Python and Django, using `uv` for
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/denis911/antigravity-django-todo-checklist-hw1
    cd antigravity-django-todo-checklist-hw1
    ```
 
