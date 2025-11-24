@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import TodoItem
+from .forms import TodoItemForm
 
 class TodoListView(ListView):
     model = TodoItem
@@ -11,13 +12,13 @@ class TodoListView(ListView):
 
 class TodoCreateView(CreateView):
     model = TodoItem
-    fields = ['title', 'description', 'due_date']
+    form_class = TodoItemForm
     template_name = 'todo_app/todo_form.html'
     success_url = reverse_lazy('todo-list')
 
 class TodoUpdateView(UpdateView):
     model = TodoItem
-    fields = ['title', 'description', 'due_date']
+    form_class = TodoItemForm
     template_name = 'todo_app/todo_form.html'
     success_url = reverse_lazy('todo-list')
 
