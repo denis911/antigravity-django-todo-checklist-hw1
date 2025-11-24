@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import TodoItem
 
-# Register your models here.
+@admin.register(TodoItem)
+class TodoItemAdmin(admin.ModelAdmin):
+    list_display = ('title', 'due_date', 'is_resolved')
+    list_filter = ('is_resolved', 'due_date')
+    search_fields = ('title', 'description')
