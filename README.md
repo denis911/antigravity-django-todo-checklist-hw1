@@ -55,3 +55,14 @@ uv run python manage.py test todo_app
 2. **Edit Todo**: Click "Edit" on an existing item, modify details, and save.
 3. **Resolve**: Click "Resolve" to toggle the completion status.
 4. **Delete**: Click "Delete", then confirm the deletion.
+
+## Admin Panel
+
+You can also manage Todo items via the built-in Django Admin interface.
+
+1. **Create a superuser:**
+   ```bash
+   uv run python manage.py createsuperuser
+   ```
+2. **Access the admin panel:**
+   Navigate to `http://127.0.0.1:8000/admin/` and log in with your credentials.
